@@ -1,0 +1,22 @@
+{
+  "name": "moment-thai-solar",
+  "version": "0.0.1",
+  "description": "Thai solar format support for momentjs",
+  "main": "target/moment-thai-solar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yociduo/moment-thai-solar.git"
+  },
+  "author": "Eden Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yociduo/moment-thai-solar/issues"
+  },
+  "homepage": "https://github.com/yociduo/moment-thai-solar#readme",
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}
