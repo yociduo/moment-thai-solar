@@ -1,3 +1,11 @@
+/*!
+ * moment-thai-solar
+ * https://github.com/yociduo/moment-thai-solar#readme
+ * Version: 0.0.1 - 2017-06-09T14:10:06.972Z
+ * License: MIT
+ */
+
+
 (function (global, factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
         // CMD
