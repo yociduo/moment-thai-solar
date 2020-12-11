@@ -1,7 +1,7 @@
 /*!
  * moment-thai-solar
  * https://github.com/yociduo/moment-thai-solar#readme
- * Version: 0.0.1 - 2017-06-09T14:10:06.972Z
+ * Version: 0.0.2 - 2020-12-11T06:03:51.140Z
  * License: MIT
  */
 
@@ -105,7 +105,7 @@
     /************************************
      Constants
      ************************************/
-    var formattingTokens = /xkY|YY(YY)?|Q|MM?|MMMM?|DD?|Do|DDDD?|X|x|gg(gg)?|ww?|e|dddd?|GG(GG)?|WW?|E|HH?|hh?|a|A|mm?|ss?|SS?S?S?|ZZ?|./g;
+    var formattingTokens = /xkY|xky|YY(YY)?|Q|MM?|MMMM?|DD?|Do|DDDD?|X|x|gg(gg)?|ww?|e|dddd?|GG(GG)?|WW?|E|HH?|hh?|a|A|mm?|ss?|SS?S?S?|ZZ?|./g;
     var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LT|LL?L?L?|l{1,4})/g,
 
         parseTokenOneOrTwoDigits = /\d\d?/,
@@ -122,6 +122,9 @@
         formatTokenFunctions = {
             xkY: function () {
                 return this.thaiYear() + '';
+            },
+            xky: function () {
+                return this.thaiYear() % 100 + '';
             }
         };
 
@@ -192,10 +195,9 @@
      */
     var getParseRegexForToken = function (token, config) {
         switch (token) {
-            case 'xkY':
-                return parseTokenFourDigits;
             case 'DDDD':
                 return parseTokenThreeDigits;
+            case 'xkY':
             case 'YYYY':
                 return parseTokenFourDigits;
             case 'YYYYY':
@@ -223,6 +225,7 @@
                 return parseTokenT;
             case 'MM':
             case 'DD':
+            case 'xky':
             case 'YY':
             case 'HH':
             case 'hh':
