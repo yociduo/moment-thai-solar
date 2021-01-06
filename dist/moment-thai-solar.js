@@ -1,7 +1,7 @@
 /*!
  * moment-thai-solar
  * https://github.com/yociduo/moment-thai-solar#readme
- * Version: 0.0.2 - 2020-12-11T06:03:51.140Z
+ * Version: 0.0.3 - 2021-01-06T09:32:41.426Z
  * License: MIT
  */
 
@@ -248,6 +248,9 @@
         switch (token) {
             case 'xkY':
                 config._thaiYear = ~~input;
+                break;
+            case 'xky':
+                config._thaiYear = ~~input + 2500;
                 break;
         }
         if (input == null) {

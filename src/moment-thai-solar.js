@@ -241,6 +241,9 @@
             case 'xkY':
                 config._thaiYear = ~~input;
                 break;
+            case 'xky':
+                config._thaiYear = ~~input + 2500;
+                break;
         }
         if (input == null) {
             config._isValid = false;
